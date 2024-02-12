@@ -15,7 +15,7 @@ integrand1 = (besselj(1, u_s)).^2;
 integrand2 = (pi./u_s./K) - sin(thetas) - cos(thetas) + (u_s*K.*sin(thetas).*cos(thetas)./pi);
 integrand = integrand1.*integrand2;
 
-% figure out what u-values should be zeroed out
+% figure out what u-values should be masked out
 mask = u_s < (pi*sec(thetas)/K);
 
 % compute riemann sum and contrast
