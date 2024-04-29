@@ -1,10 +1,17 @@
 function [C] = FLOD_method(K , n_samps)
 
+if K == 0
+    C = 0;
+    return
+end
+
 % get sampled arrays for u and theta
 samp1 = sqrt(2) * pi / K / n_samps;
 samp2 = pi / 4 / n_samps;
+
 u = 0 : samp1: pi/K * sqrt(2);
 theta = 0 : samp2 : pi/4;
+
 [u_s, thetas] = meshgrid(u, theta);
 
 % prevent division by zero

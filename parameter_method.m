@@ -2,7 +2,7 @@ function [contrast] = parameter_method(f, wvl, D_ap, d, Dz, n_samps)
 
 z_im = ((-1/Dz) + (1/f))^(-1);  % [m] image distance
 gridsamp = 1/n_samps;           % [unitless] pixel spacing
-bound = 2;                      % [unitless] upper and lower bound for the x and y axes
+bound = 1;                      % [unitless] upper and lower bound for the x and y axes
 [xx, yy] = meshgrid(-bound:gridsamp:bound); % create x, y meshgrids
 
 
